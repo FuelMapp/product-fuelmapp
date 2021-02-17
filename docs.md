@@ -11,8 +11,8 @@ roles:
     2. Parse the raw station objects into useful data - `rawStation => station`
 
 It is not clear at the time of development whether handling this through the
-client or by the server (server takes a while to wake up, and station data is
-lightweight).
+client or by the server would be the best choice (server takes a while to
+wake up, and station data is lightweight).
 
 Because of this, it is important that this task is handled as a microservice,
 which will accept a `query` object and will return an array of `stations`. This
