@@ -50,13 +50,13 @@ functionallity is achieved.
 
 ![UML diagram of database models](./assets/db_diagram.png)
 
-### Gas Stations
+#### Gas Stations
 
 Station data is held in the [public API
 ](https://geoportalgasolineras.es/#/Descargas) and therefore can be directly
 handled in the client through the [stations.service](#stations.service) 
 
-### User_Station
+#### User_Station
 
 The list of Stations favorited by an User will be stored as a pivot table,
 which will hold the IDs of the User, Station and the Municipality that the
@@ -66,4 +66,7 @@ Although non-relational DBs like Mongo allow storing arrays as document
 properties, this is an antipattern, and since Stations are stored on a
 different DB this was deemed the best option.
 
+### Controllers
 
+For the MVP these will be limited to CRUD operations for Users. All other 
+tasks will be handled by the client.
